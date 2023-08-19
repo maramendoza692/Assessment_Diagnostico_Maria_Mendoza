@@ -87,7 +87,7 @@ public class TareaServiceImpl implements ITareaService{
 	        response.setData(tareaActualizada);
 	    } else {
 	        
-	        response.setMessage("No se encontró la tarea con ID: " + tareaId);
+	        response.setMessage("No se encontró la tarea");
 	    }
 
 	    return response;

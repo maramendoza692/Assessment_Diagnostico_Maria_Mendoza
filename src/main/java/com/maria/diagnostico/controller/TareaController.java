@@ -73,9 +73,9 @@ public class TareaController {
 	@PutMapping(path = "/actualizarTarea",
 			produces = MediaType.APPLICATION_JSON_VALUE,
 			consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Response<Tarea>> actualizarTarea(@RequestBody Integer tareaId, Tarea tareaNueva){
+	public ResponseEntity<Response<Tarea>> actualizarTarea(@RequestBody Tarea tareaNueva){
 		
-		Response<Tarea> tareaModificada = tareaService.editarTarea(tareaId, tareaNueva);
+		Response<Tarea> tareaModificada = tareaService.editarTarea(tareaNueva);
 		return new ResponseEntity<Response<Tarea>> (tareaModificada, HttpStatus.OK);
 	}
 }
