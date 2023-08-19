@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "9a883ab0-0b52-45ac-ada3-8ada89375fb5",
+		"name": "Diagnostico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26406695"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mmendozar\",\r\n    \"password\": \"evnw1010\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtbWVuZG96YXIiLCJyb2xlcyI6WyJ3cml0ZSJdLCJpZFVzdWFyaW8iOjEsIm5vbWJyZSI6Ik1hcsOtYSIsImlhdCI6MTY5MjQzOTEzNSwiZXhwIjoxNjkyNDQ1NjE1fQ.vz0jTtvC91aX1Pf4_lbiz9oxj6BaF_GQSrWtL0iwpbgzMyfQ.mvZQPE-jUfas-RrKBEYseFIr-fiTajO7HmsGHt9OHl8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/tarea/consultarTodos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"consultarTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tareaPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tarea/buscarTareaPorID/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"buscarTareaPorID",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Instrumento evaluación\",\r\n    \"descripcion\": \"Realizar el instrumento de evaluaciónd e la unidad 3 de inglés\",\r\n    \"estado\": \"pendiente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tarea/guardarTarea",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"guardarTarea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tarea/eliminarTarea/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"eliminarTarea",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtbWVuZG96YXIiLCJyb2xlcyI6WyJ3cml0ZSJdLCJpZFVzdWFyaW8iOjEsIm5vbWJyZSI6Ik1hcsOtYSIsImlhdCI6MTY5MjQzOTEzNSwiZXhwIjoxNjkyNDQ1NjE1fQ.vz0jTtvC91aX1Pf4_lbiz9oxj6BaF_GQSrWtL0iwpbg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"nombre\": \"Instrumento evaluación\",\r\n    \"descripcion\": \"Realizar el instrumento de evaluaciónd e la unidad 3 de inglés\",\r\n    \"estado\": \"completada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tarea/actualizarTarea",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"actualizarTarea"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
